@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.8.1 mingw32 -mcpu=cortex-m4 -mthumb -g2 -Wall -O0 -c -DSTM32F429ZI -DSTM32F429xx -IK:\Test01\app -IK:\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc -IK:\Test01 -IK:\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver -IK:\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\CMSIS -IK:\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\CMSIS\Include -IK:\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers -IK:\">
+      <target file="LiteTasker.o" lastModified="14df0ee5a72">
+         <source file="..\..\..\app\LiteTasker.c" lastModified="14dacd0158d"/>
+      </target>
+      <target file="stm32f4xx_hal_rcc.o" lastModified="14df0ee3e26">
+         <source file="..\..\..\..\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="Button.o" lastModified="14df0eeb311">
+         <source file="..\..\..\app\Button.c" lastModified="14dad00fe78"/>
+      </target>
+      <target file="stm32f4xx_hal.o" lastModified="14df0ee2763">
+         <source file="..\..\..\..\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="LED.o" lastModified="14df0eea70e">
+         <source file="..\..\..\app\LED.c" lastModified="14dacbbbff5"/>
+      </target>
+      <target file="Time.o" lastModified="14df0ee1496">
+         <source file="..\..\..\app\Time.c" lastModified="14dae5b6627"/>
+      </target>
+      <target file="LED1.o" lastModified="14df0ee7995">
+         <source file="..\..\..\app\LED1.c" lastModified="14dae580dbe"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="14df0ee537d">
+         <source file="..\..\..\app\system_stm32f4xx.c" lastModified="14c21974cd0"/>
+      </target>
+      <target file="RunningLight.o" lastModified="14df0edf2b2">
+         <source file="..\..\..\app\RunningLight.c" lastModified="14dae0f183c"/>
+      </target>
+      <target file="startup_stm32f429xx.o" lastModified="14df0ee03ae">
+         <source file="..\..\..\app\startup_stm32f429xx.s" lastModified="14c0ebfd050"/>
+      </target>
+      <target file="stm32f4xx_hal_cortex.o" lastModified="14df0ee4ac8">
+         <source file="..\..\..\..\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="LED2.o" lastModified="14df0ee8d6c">
+         <source file="..\..\..\app\LED2.c" lastModified="14dae57ebcc"/>
+      </target>
+      <target file="main.o" lastModified="14df0ee0331">
+         <source file="..\..\..\app\main.c" lastModified="14dae65a33f"/>
+      </target>
+      <target file="stm32f4xx_hal_gpio.o" lastModified="14df0ee6570">
+         <source file="..\..\..\..\stm32cubef4\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="LED3.o" lastModified="14df0ee9e54">
+         <source file="..\..\..\app\LED3.c" lastModified="14dae580db4"/>
+      </target>
+   </processor>
+</history>
