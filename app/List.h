@@ -1,5 +1,5 @@
-#ifndef Button_H
-#define Button_H
+#ifndef List_H
+#define List_H
 
 typedef struct ListElement_t ListElement;
 struct ListElement_t
@@ -15,4 +15,11 @@ typedef struct
   int length;
 } List;
 
-#endif // Button_H
+List *listNew(int length);
+void listDel(List *list);
+void listAdd(List *list, void *data);
+void *listRemove(List *list);
+int listIsEmpty(List *list);
+int listIsFull(List *list);
+
+#endif // List_H
