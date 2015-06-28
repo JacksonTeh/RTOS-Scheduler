@@ -15,11 +15,14 @@ typedef struct
   int length;
 } List;
 
+ListElement *createListElement();
+void destroyListElement(ListElement *listElement);
 List *listNew(int length);
 void listDel(List *list);
-void listAdd(List *list, void *data);
-void *listRemove(List *list);
-int listIsEmpty(List *list);
-int listIsFull(List *list);
+
+void listAddHead(List *list, void *data);
+void listAddTail(List *list, void *data);
+void *listRemoveHead(List *list);
+void *listRemoveTail(List *list);
 
 #endif // List_H
