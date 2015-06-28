@@ -21,7 +21,7 @@
 #define toggleLED(port, pin)	HAL_GPIO_TogglePin(port, pin)
 #define	readPinLED(port, pin)	HAL_GPIO_ReadPin(port, pin)
 
-#define CLK_EN()	do{										    \
+#define CLK_EN()	do{										\
 							__HAL_RCC_GPIOA_CLK_ENABLE();	\
 							__HAL_RCC_GPIOB_CLK_ENABLE();	\
 							__HAL_RCC_GPIOC_CLK_ENABLE();	\
@@ -29,14 +29,14 @@
 					}while(0)
 
 #define configureLED(pin, port)	do{											\
-									GPIO_InitTypeDef GpioInfo;				    \
-                                                        \
+									GPIO_InitTypeDef GpioInfo;				\
+                                                        					\
 									GpioInfo.Mode = GPIO_MODE_OUTPUT_PP;	\
-									GpioInfo.Pin = pin;						        \
-									GpioInfo.Pull = GPIO_NOPULL;			    \
-									GpioInfo.Speed = GPIO_SPEED_HIGH;		  \
-                                                        \
-									HAL_GPIO_Init(port, &GpioInfo);	      \
+									GpioInfo.Pin = pin;						\
+									GpioInfo.Pull = GPIO_NOPULL;			\
+									GpioInfo.Speed = GPIO_SPEED_HIGH;		\
+                                                        					\
+									HAL_GPIO_Init(port, &GpioInfo);	      	\
 								}while(0)
 
 #else
