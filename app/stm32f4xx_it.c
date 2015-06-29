@@ -154,11 +154,12 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
+/*
 void SysTick_Handler(void)
 {
   HAL_IncTick();
 }
-
+*/
 /******************************************************************************/
 /*                 STM32F4xx Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

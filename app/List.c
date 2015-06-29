@@ -5,6 +5,8 @@
 ListElement *createListElement()
 {
     ListElement *listElement = malloc(sizeof(ListElement));
+    listElement->next = NULL;
+    listElement->data = NULL;
 
     return listElement;
 }
@@ -12,14 +14,14 @@ ListElement *createListElement()
 List *listNew(int length)
 {
     List *list = malloc(sizeof(List));
-    list->head = malloc(sizeof(ListElement));
-    list->tail = malloc(sizeof(ListElement));
-    list->head->next = NULL;
-    list->head->data = NULL;
-    list->tail->next = NULL;
-    list->tail->data = NULL;
-    // list->head = NULL;
-    // list->tail = NULL;
+    // list->head = malloc(sizeof(ListElement));
+    // list->tail = malloc(sizeof(ListElement));
+    // list->head->next = NULL;
+    // list->head->data = NULL;
+    // list->tail->next = NULL;
+    // list->tail->data = NULL;
+    list->head = NULL;
+    list->tail = NULL;
     list->length = length;
 
     return list;
@@ -51,7 +53,6 @@ void listAddHead(List *list, void *data)
 {
     ListElement *newElement = createListElement();
     newElement->data = data;
-    newElement->next = NULL;
 
     if(list->head->data == NULL)
     {
