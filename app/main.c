@@ -1,5 +1,6 @@
 //#include "stm32f4xx_hal.h"
 #include "main.h"
+#include "Task.h"
 #include "stm32f4xx_hal_gpio.h"
 #include "Time.h"
 #include "LED.h"
@@ -8,6 +9,12 @@
 #include "LedSM.h"
 
 void testFunc(void);
+void taskSwitch(void);
+
+int dummy(int value)
+{
+	return value * 10;
+}
 
 int main(void)
 {
@@ -22,15 +29,18 @@ int main(void)
 	configureLED(LED6, PORTC);
 	buttonInitData(&buttonData);
 	ledInitData(&ledData);
+
 	initSysTick();
   
-	testFunc();
+	initTcb();
+	//testFunc();
+	taskSwitch();
 
     while(1)
     {
     	//updateTime();
-    	buttonSM(&buttonData);
-    	ledSM(&ledData);
+    	//buttonSM(&buttonData);
+    	//ledSM(&ledData);
     }
 }
 
