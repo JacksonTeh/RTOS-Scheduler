@@ -96,8 +96,8 @@ Discarded input sections
  .data          0x00000000        0x0 ..\obj\assembly.o
  .bss           0x00000000        0x0 ..\obj\assembly.o
  .text.testFunc
-                0x00000000       0x28 ..\obj\assembly.o
- .debug_line    0x00000000       0x79 ..\obj\assembly.o
+                0x00000000       0x24 ..\obj\assembly.o
+ .debug_line    0x00000000       0x78 ..\obj\assembly.o
  .debug_info    0x00000000       0xa0 ..\obj\assembly.o
  .debug_abbrev  0x00000000       0x14 ..\obj\assembly.o
  .debug_aranges
@@ -185,117 +185,117 @@ LOAD c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-
                 0x08000200                . = ALIGN (0x4)
  *(.text)
  .text          0x08000200       0x5c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtbegin.o
- .text          0x0800025c       0xfc ..\obj\Task.o
+ .text          0x0800025c       0xf8 ..\obj\Task.o
                 0x0800025c                taskOne
-                0x0800026c                initTcb
- .text          0x08000358       0x74 ..\obj\ButtonSM.o
-                0x08000358                buttonInitData
-                0x08000370                buttonSM
- .text          0x080003cc      0x544 ..\obj\stm32f4xx_hal_cortex.o
-                0x08000760                HAL_NVIC_SetPriorityGrouping
-                0x08000774                HAL_NVIC_SetPriority
-                0x080007ac                HAL_NVIC_EnableIRQ
-                0x080007c8                HAL_NVIC_DisableIRQ
-                0x080007e4                HAL_NVIC_SystemReset
-                0x080007f0                HAL_SYSTICK_Config
-                0x08000808                HAL_NVIC_GetPriorityGrouping
-                0x08000818                HAL_NVIC_GetPriority
-                0x08000848                HAL_NVIC_SetPendingIRQ
-                0x08000864                HAL_NVIC_GetPendingIRQ
-                0x08000884                HAL_NVIC_ClearPendingIRQ
-                0x080008a0                HAL_NVIC_GetActive
-                0x080008c0                HAL_SYSTICK_CLKSourceConfig
-                0x080008f8                HAL_SYSTICK_IRQHandler
-                0x08000904                HAL_SYSTICK_Callback
- .text          0x08000910       0x2c ..\obj\Button.o
-                0x08000910                initUserButton
- .text          0x0800093c      0x154 ..\obj\system_stm32f4xx.o
-                0x0800093c                SystemInit
-                0x08000998                SystemCoreClockUpdate
- .text          0x08000a90      0x368 ..\obj\stm32f4xx_hal.o
-                0x08000a90                HAL_Init
-                0x08000ac8                HAL_DeInit
-                0x08000b20                HAL_MspInit
-                0x08000b2c                HAL_MspDeInit
-                0x08000b38                HAL_InitTick
-                0x08000b70                HAL_IncTick
-                0x08000b8c                HAL_GetTick
-                0x08000ba4                HAL_Delay
-                0x08000bd0                HAL_SuspendTick
-                0x08000bec                HAL_ResumeTick
-                0x08000c08                HAL_GetHalVersion
-                0x08000c1c                HAL_GetREVID
-                0x08000c34                HAL_GetDEVID
-                0x08000c50                HAL_DBGMCU_EnableDBGSleepMode
-                0x08000c6c                HAL_DBGMCU_DisableDBGSleepMode
-                0x08000c88                HAL_DBGMCU_EnableDBGStopMode
-                0x08000ca4                HAL_DBGMCU_DisableDBGStopMode
-                0x08000cc0                HAL_DBGMCU_EnableDBGStandbyMode
-                0x08000cdc                HAL_DBGMCU_DisableDBGStandbyMode
-                0x08000cf8                HAL_EnableCompensationCell
-                0x08000d38                HAL_DisableCompensationCell
-                0x08000d78                HAL_EnableMemorySwappingBank
-                0x08000db8                HAL_DisableMemorySwappingBank
- .text          0x08000df8       0xb0 ..\obj\Time.o
-                0x08000df8                updateTime
-                0x08000e30                getCurrentTime
-                0x08000e40                delay
-                0x08000e74                isTimerExpire
- .text          0x08000ea8       0x50 ..\obj\stm32f4xx_it.o
-                0x08000ea8                NMI_Handler
-                0x08000eb4                HardFault_Handler
-                0x08000ebc                MemManage_Handler
-                0x08000ec4                BusFault_Handler
-                0x08000ecc                UsageFault_Handler
-                0x08000ed4                SVC_Handler
-                0x08000ee0                DebugMon_Handler
-                0x08000eec                PendSV_Handler
- .text          0x08000ef8      0x674 ..\obj\stm32f4xx_hal_gpio.o
-                0x08000ef8                HAL_GPIO_Init
-                0x08001240                HAL_GPIO_DeInit
-                0x08001454                HAL_GPIO_ReadPin
-                0x08001484                HAL_GPIO_WritePin
-                0x080014b4                HAL_GPIO_TogglePin
-                0x080014d8                HAL_GPIO_LockPin
-                0x08001528                HAL_GPIO_EXTI_IRQHandler
-                0x08001558                HAL_GPIO_EXTI_Callback
- .text          0x0800156c      0x120 ..\obj\LedSM.o
-                0x0800156c                ledInitData
-                0x0800158c                ledSM
- .text          0x0800168c      0xd74 ..\obj\stm32f4xx_hal_rcc.o
-                0x0800168c                HAL_RCC_DeInit
-                0x08001704                HAL_RCC_OscConfig
-                0x08001bbc                HAL_RCC_ClockConfig
-                0x08001ed8                HAL_RCC_MCOConfig
-                0x08001f9c                HAL_RCC_EnableCSS
-                0x08001fb4                HAL_RCC_DisableCSS
-                0x08001fcc                HAL_RCC_GetSysClockFreq
-                0x080020e4                HAL_RCC_GetHCLKFreq
-                0x0800213c                HAL_RCC_GetPCLK1Freq
-                0x08002188                HAL_RCC_GetPCLK2Freq
-                0x080021d4                HAL_RCC_GetOscConfig
-                0x08002370                HAL_RCC_GetClockConfig
-                0x080023d0                HAL_RCC_NMI_IRQHandler
-                0x080023f4                HAL_RCC_CSSCallback
- .text          0x08002400      0x1f0 ..\obj\main.o
-                0x08002498                dummy
-                0x080024b8                main
-                0x080025c8                initSysTick
+                0x08000264                initTcb
+ .text          0x08000354       0x74 ..\obj\ButtonSM.o
+                0x08000354                buttonInitData
+                0x0800036c                buttonSM
+ .text          0x080003c8      0x544 ..\obj\stm32f4xx_hal_cortex.o
+                0x0800075c                HAL_NVIC_SetPriorityGrouping
+                0x08000770                HAL_NVIC_SetPriority
+                0x080007a8                HAL_NVIC_EnableIRQ
+                0x080007c4                HAL_NVIC_DisableIRQ
+                0x080007e0                HAL_NVIC_SystemReset
+                0x080007ec                HAL_SYSTICK_Config
+                0x08000804                HAL_NVIC_GetPriorityGrouping
+                0x08000814                HAL_NVIC_GetPriority
+                0x08000844                HAL_NVIC_SetPendingIRQ
+                0x08000860                HAL_NVIC_GetPendingIRQ
+                0x08000880                HAL_NVIC_ClearPendingIRQ
+                0x0800089c                HAL_NVIC_GetActive
+                0x080008bc                HAL_SYSTICK_CLKSourceConfig
+                0x080008f4                HAL_SYSTICK_IRQHandler
+                0x08000900                HAL_SYSTICK_Callback
+ .text          0x0800090c       0x2c ..\obj\Button.o
+                0x0800090c                initUserButton
+ .text          0x08000938      0x154 ..\obj\system_stm32f4xx.o
+                0x08000938                SystemInit
+                0x08000994                SystemCoreClockUpdate
+ .text          0x08000a8c      0x368 ..\obj\stm32f4xx_hal.o
+                0x08000a8c                HAL_Init
+                0x08000ac4                HAL_DeInit
+                0x08000b1c                HAL_MspInit
+                0x08000b28                HAL_MspDeInit
+                0x08000b34                HAL_InitTick
+                0x08000b6c                HAL_IncTick
+                0x08000b88                HAL_GetTick
+                0x08000ba0                HAL_Delay
+                0x08000bcc                HAL_SuspendTick
+                0x08000be8                HAL_ResumeTick
+                0x08000c04                HAL_GetHalVersion
+                0x08000c18                HAL_GetREVID
+                0x08000c30                HAL_GetDEVID
+                0x08000c4c                HAL_DBGMCU_EnableDBGSleepMode
+                0x08000c68                HAL_DBGMCU_DisableDBGSleepMode
+                0x08000c84                HAL_DBGMCU_EnableDBGStopMode
+                0x08000ca0                HAL_DBGMCU_DisableDBGStopMode
+                0x08000cbc                HAL_DBGMCU_EnableDBGStandbyMode
+                0x08000cd8                HAL_DBGMCU_DisableDBGStandbyMode
+                0x08000cf4                HAL_EnableCompensationCell
+                0x08000d34                HAL_DisableCompensationCell
+                0x08000d74                HAL_EnableMemorySwappingBank
+                0x08000db4                HAL_DisableMemorySwappingBank
+ .text          0x08000df4       0xb0 ..\obj\Time.o
+                0x08000df4                updateTime
+                0x08000e2c                getCurrentTime
+                0x08000e3c                delay
+                0x08000e70                isTimerExpire
+ .text          0x08000ea4       0x50 ..\obj\stm32f4xx_it.o
+                0x08000ea4                NMI_Handler
+                0x08000eb0                HardFault_Handler
+                0x08000eb8                MemManage_Handler
+                0x08000ec0                BusFault_Handler
+                0x08000ec8                UsageFault_Handler
+                0x08000ed0                SVC_Handler
+                0x08000edc                DebugMon_Handler
+                0x08000ee8                PendSV_Handler
+ .text          0x08000ef4      0x674 ..\obj\stm32f4xx_hal_gpio.o
+                0x08000ef4                HAL_GPIO_Init
+                0x0800123c                HAL_GPIO_DeInit
+                0x08001450                HAL_GPIO_ReadPin
+                0x08001480                HAL_GPIO_WritePin
+                0x080014b0                HAL_GPIO_TogglePin
+                0x080014d4                HAL_GPIO_LockPin
+                0x08001524                HAL_GPIO_EXTI_IRQHandler
+                0x08001554                HAL_GPIO_EXTI_Callback
+ .text          0x08001568      0x120 ..\obj\LedSM.o
+                0x08001568                ledInitData
+                0x08001588                ledSM
+ .text          0x08001688      0xd74 ..\obj\stm32f4xx_hal_rcc.o
+                0x08001688                HAL_RCC_DeInit
+                0x08001700                HAL_RCC_OscConfig
+                0x08001bb8                HAL_RCC_ClockConfig
+                0x08001ed4                HAL_RCC_MCOConfig
+                0x08001f98                HAL_RCC_EnableCSS
+                0x08001fb0                HAL_RCC_DisableCSS
+                0x08001fc8                HAL_RCC_GetSysClockFreq
+                0x080020e0                HAL_RCC_GetHCLKFreq
+                0x08002138                HAL_RCC_GetPCLK1Freq
+                0x08002184                HAL_RCC_GetPCLK2Freq
+                0x080021d0                HAL_RCC_GetOscConfig
+                0x0800236c                HAL_RCC_GetClockConfig
+                0x080023cc                HAL_RCC_NMI_IRQHandler
+                0x080023f0                HAL_RCC_CSSCallback
+ .text          0x080023fc      0x1f0 ..\obj\main.o
+                0x08002494                dummy
+                0x080024b4                main
+                0x080025c4                initSysTick
  *(.text*)
  .text.__libc_init_array
-                0x080025f0       0x50 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
-                0x080025f0                __libc_init_array
+                0x080025ec       0x50 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                0x080025ec                __libc_init_array
  .text.startup.register_fini
-                0x08002640       0x14 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x08002654        0xc c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
-                0x08002654                atexit
+                0x0800263c       0x14 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08002650        0xc c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                0x08002650                atexit
  .text.__libc_fini_array
-                0x08002660       0x2c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
-                0x08002660                __libc_fini_array
+                0x0800265c       0x2c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                0x0800265c                __libc_fini_array
  .text.__register_exitproc
-                0x0800268c       0xa4 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
-                0x0800268c                __register_exitproc
- *fill*         0x08002730       0xd0 
+                0x08002688       0xa4 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                0x08002688                __register_exitproc
+ *fill*         0x0800272c       0xd4 
  .text.taskSwitch
                 0x08002800      0x200 ..\obj\schedular.o
                 0x08002800                taskSwitch
@@ -671,22 +671,22 @@ OUTPUT(Test01.elf elf32-littlearm)
  .debug_aranges
                 0x000001c0       0x20 ..\obj\main.o
 
-.debug_line     0x00000000     0x218d
- .debug_line    0x00000000      0x144 ..\obj\Task.o
- .debug_line    0x00000144      0x1d5 ..\obj\ButtonSM.o
- .debug_line    0x00000319      0x348 ..\obj\stm32f4xx_hal_cortex.o
- .debug_line    0x00000661      0x21e ..\obj\Button.o
- .debug_line    0x0000087f      0x1c6 ..\obj\system_stm32f4xx.o
- .debug_line    0x00000a45      0x35b ..\obj\stm32f4xx_hal.o
- .debug_line    0x00000da0      0x1a0 ..\obj\Time.o
- .debug_line    0x00000f40       0x9b ..\obj\schedular.o
- .debug_line    0x00000fdb      0x1b9 ..\obj\stm32f4xx_it.o
- .debug_line    0x00001194      0x452 ..\obj\stm32f4xx_hal_gpio.o
- .debug_line    0x000015e6      0x259 ..\obj\LedSM.o
- .debug_line    0x0000183f      0x5b7 ..\obj\stm32f4xx_hal_rcc.o
- .debug_line    0x00001df6       0xa4 ..\obj\startup_stm32f429xx.o
- .debug_line    0x00001e9a       0x67 ..\obj\Message.o
- .debug_line    0x00001f01      0x28c ..\obj\main.o
+.debug_line     0x00000000     0x2192
+ .debug_line    0x00000000      0x148 ..\obj\Task.o
+ .debug_line    0x00000148      0x1d5 ..\obj\ButtonSM.o
+ .debug_line    0x0000031d      0x348 ..\obj\stm32f4xx_hal_cortex.o
+ .debug_line    0x00000665      0x21e ..\obj\Button.o
+ .debug_line    0x00000883      0x1c6 ..\obj\system_stm32f4xx.o
+ .debug_line    0x00000a49      0x35b ..\obj\stm32f4xx_hal.o
+ .debug_line    0x00000da4      0x1a0 ..\obj\Time.o
+ .debug_line    0x00000f44       0x9c ..\obj\schedular.o
+ .debug_line    0x00000fe0      0x1b9 ..\obj\stm32f4xx_it.o
+ .debug_line    0x00001199      0x452 ..\obj\stm32f4xx_hal_gpio.o
+ .debug_line    0x000015eb      0x259 ..\obj\LedSM.o
+ .debug_line    0x00001844      0x5b7 ..\obj\stm32f4xx_hal_rcc.o
+ .debug_line    0x00001dfb       0xa4 ..\obj\startup_stm32f429xx.o
+ .debug_line    0x00001e9f       0x67 ..\obj\Message.o
+ .debug_line    0x00001f06      0x28c ..\obj\main.o
 
 .debug_str      0x00000000     0x1785
  .debug_str     0x00000000      0x170 ..\obj\Task.o
@@ -732,19 +732,19 @@ OUTPUT(Test01.elf elf32-littlearm)
  .comment       0x00000000       0x71 ..\obj\Message.o
  .comment       0x00000000       0x71 ..\obj\main.o
 
-.debug_frame    0x00000000      0xe6c
- .debug_frame   0x00000000       0x58 ..\obj\Task.o
- .debug_frame   0x00000058       0x5c ..\obj\ButtonSM.o
- .debug_frame   0x000000b4      0x428 ..\obj\stm32f4xx_hal_cortex.o
- .debug_frame   0x000004dc       0x34 ..\obj\Button.o
- .debug_frame   0x00000510       0x58 ..\obj\system_stm32f4xx.o
- .debug_frame   0x00000568      0x310 ..\obj\stm32f4xx_hal.o
- .debug_frame   0x00000878       0x98 ..\obj\Time.o
- .debug_frame   0x00000910       0xf0 ..\obj\stm32f4xx_it.o
- .debug_frame   0x00000a00      0x14c ..\obj\stm32f4xx_hal_gpio.o
- .debug_frame   0x00000b4c       0x5c ..\obj\LedSM.o
- .debug_frame   0x00000ba8      0x204 ..\obj\stm32f4xx_hal_rcc.o
- .debug_frame   0x00000dac       0xc0 ..\obj\main.o
+.debug_frame    0x00000000      0xe64
+ .debug_frame   0x00000000       0x50 ..\obj\Task.o
+ .debug_frame   0x00000050       0x5c ..\obj\ButtonSM.o
+ .debug_frame   0x000000ac      0x428 ..\obj\stm32f4xx_hal_cortex.o
+ .debug_frame   0x000004d4       0x34 ..\obj\Button.o
+ .debug_frame   0x00000508       0x58 ..\obj\system_stm32f4xx.o
+ .debug_frame   0x00000560      0x310 ..\obj\stm32f4xx_hal.o
+ .debug_frame   0x00000870       0x98 ..\obj\Time.o
+ .debug_frame   0x00000908       0xf0 ..\obj\stm32f4xx_it.o
+ .debug_frame   0x000009f8      0x14c ..\obj\stm32f4xx_hal_gpio.o
+ .debug_frame   0x00000b44       0x5c ..\obj\LedSM.o
+ .debug_frame   0x00000ba0      0x204 ..\obj\stm32f4xx_hal_rcc.o
+ .debug_frame   0x00000da4       0xc0 ..\obj\main.o
 
 .debug_ranges   0x00000000       0x20
  .debug_ranges  0x00000000       0x20 ..\obj\startup_stm32f429xx.o

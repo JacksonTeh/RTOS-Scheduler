@@ -9,7 +9,11 @@ Tcb taskTwoTcb;
 
 void taskOne(void)
 {
-    return;
+	//run one time only, use to identified task switch is correct
+	asm(
+		"ldr  r0, =#0x11111111\n\t"
+	);
+    while(1);
 }
 
 /**
@@ -40,6 +44,6 @@ void initTcb()
 	cc->R11 = 0xc000000c;
 	cc->R12 = 0xd000000d;
 	cc->LR = 0xe000000e;
-	cc->PC = (uint32_t *)&taskOne;
+	cc->PC = (uint32_t *)taskOne;
 	cc->xPSR = 0x01000000;
 }

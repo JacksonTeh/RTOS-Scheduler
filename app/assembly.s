@@ -16,7 +16,7 @@ testFunc:
   movw.w	r4, 0xface
   movt.w	r4, 0x1234
   stmdb SP!, {r0,r1}
-  push	{r1, r0, r2}
+  //push	{r1, r0, r2}
   pop	{R0}
   //stmdb sp! {r0, r1, r2}
   push  {lr}
