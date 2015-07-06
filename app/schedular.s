@@ -5,6 +5,9 @@
 
 .global	taskSwitch
 .global	SysTick_Handler
+.extern mainTcb
+.extern taskOneTcb
+.extern taskTwoTcb
 
 .equ TCB_NEXT,	0
 .equ TCB_NAME,	4
@@ -35,7 +38,13 @@ taskSwitch:
 SysTick_Handler:
   //code here...put the rest of the register
   stmdb SP!, {r4-r11}
-  b		.
+  ldr	r0, =mainTcb
+  ldr	r1, =#0x0
+  add	r1, sp
+  str	r1, [r0, #TCB_SP]
+  ldr	r0, =taskOneTcb
+  ldr	sp, [r0, #TCB_SP]
+  bx	lr
   //push	{r7, lr}
   //add 	r7, sp, #0
   //bl	HAL_IncTick
