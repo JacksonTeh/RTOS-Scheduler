@@ -26,4 +26,7 @@ void *listRemoveHead(List *list);
 void *listRemoveTail(List *list);
 int isListEmpty(List *list);
 
+void listInit(List *list);
+void listElementInit(ListElement *listElement, void *data);
+
 #endif // List_H

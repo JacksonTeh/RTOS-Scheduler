@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <malloc.h>
+// #include <stdio.h>
+// #include <malloc.h>
 #include "List.h"
-
+/* 
 ListElement *createListElement(void *data)
 {
     ListElement *listElement = malloc(sizeof(ListElement));
@@ -47,16 +47,32 @@ void listDel(List *list)
 
         free(list);
     }
+} */
+
+void listInit(List *list)
+{
+    list->head = 0;
+    list->tail = 0;
+    list->length = 0;
+}
+
+void listElementInit(ListElement *listElement, void *data)
+{
+    listElement->next = 0;
+    listElement->data = data;
 }
 
 int isListEmpty(List *list)
 {
-    if(list->head == NULL)
+    if(list->head == 0)
         return 0;
 
     return 1;
 }
 
+
+
+/* 
 void listAddHead(List *list, void *data)
 {
     ListElement *newElement = createListElement(data);
@@ -158,4 +174,4 @@ void *listRemoveTail(List *list)
     list->length--;
 
     return temp->data;
-}
+} */
