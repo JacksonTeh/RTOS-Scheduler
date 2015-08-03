@@ -1,7 +1,7 @@
 // #include <stdio.h>
 // #include <malloc.h>
 #include "List.h"
-/* 
+/*
 ListElement *createListElement(void *data)
 {
     ListElement *listElement = malloc(sizeof(ListElement));
@@ -70,9 +70,49 @@ int isListEmpty(List *list)
     return 1;
 }
 
+void listAddTail(List *list, void *data)
+{
+    // ListElement newElement;
+    // listElementInit(&newElement, data);
 
+    if(!isListEmpty(list))
+    {
+        // list->head = &newElement;
+        // list->tail = &newElement;
+        list->head = (ListElement *)data;
+        list->tail = (ListElement *)data;
+    }
+    else
+    {
+        if(list->head->next != 0)
+        {
+            list->tail->next = (ListElement *)data;;
+            // list->tail = &newElement;
+        }
+        else
+        {
+            list->tail = (ListElement *)data;;
+            list->head->next = list->tail;
+        }
+    }
 
-/* 
+    list->length++;
+}
+
+void listRemoveHead(List *list)
+{
+    if(!isListEmpty(list))
+        return;
+
+    if(list->head == list->tail)
+        list->tail = list->tail->next;
+
+    list->head = list->head->next;
+
+    list->length--;
+}
+
+/*
 void listAddHead(List *list, void *data)
 {
     ListElement *newElement = createListElement(data);

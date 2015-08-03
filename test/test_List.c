@@ -409,3 +409,67 @@ void test_isListEmpty_given_not_empty_list_should_return_1(void)
     TEST_ASSERT_EQUAL(1, isListEmpty(&list));
 }
 
+void test_listAddTail_given_list_with_no_element_should_add_another_list_element_into_the_list(void)
+{
+    List list;
+    ListElement head;
+
+    listInit(&list);
+    listElementInit(&head, (void *)5);
+    listAddTail(&list, (void *)&head);
+
+    TEST_ASSERT_NOT_NULL(list.head);
+    TEST_ASSERT_NOT_NULL(list.tail);
+    TEST_ASSERT_EQUAL_PTR(&head, list.head);
+    TEST_ASSERT_NULL((list.head)->next);
+    TEST_ASSERT_EQUAL((void *)5, (list.head)->data);
+    TEST_ASSERT_NULL((list.tail)->next);
+    TEST_ASSERT_EQUAL_PTR(&head, list.tail);
+    TEST_ASSERT_EQUAL((void *)5, (list.tail)->data);
+    TEST_ASSERT_EQUAL(1, list.length);
+}
+
+void test_listAddTail_given_list_with_one_element_should_add_another_list_element_into_the_list(void)
+{
+    List list;
+    ListElement head, tail;
+
+    listInit(&list);
+    listElementInit(&head, (void *)5);
+    listElementInit(&tail, (void *)6);
+    listAddTail(&list, (void *)&head);
+    listAddTail(&list, (void *)&tail);
+
+    TEST_ASSERT_NOT_NULL(list.head);
+    TEST_ASSERT_NOT_NULL(list.tail);
+    TEST_ASSERT_EQUAL_PTR(list.tail, (list.head)->next);
+    TEST_ASSERT_EQUAL_PTR(&head, list.head);
+    TEST_ASSERT_EQUAL((void *)5, (list.head)->data);
+    TEST_ASSERT_NULL((list.tail)->next);
+    TEST_ASSERT_EQUAL_PTR(&tail, list.tail);
+    TEST_ASSERT_EQUAL((void *)6, (list.tail)->data);
+    TEST_ASSERT_EQUAL(2, list.length);
+}
+
+void test_listRemoveHead_given_list_with_2_element_should_remove_list_element_from_head_of_the_list(void)
+{
+    List list;
+    ListElement head, tail;
+
+    listInit(&list);
+    listElementInit(&head, (void *)5);
+    listElementInit(&tail, (void *)6);
+    listAddTail(&list, (void *)&head);
+    listAddTail(&list, (void *)&tail);
+    listRemoveHead(&list);
+
+    TEST_ASSERT_NOT_NULL(list.head);
+    TEST_ASSERT_NOT_NULL(list.tail);
+    TEST_ASSERT_NULL((list.head)->next);
+    TEST_ASSERT_EQUAL_PTR(&tail, list.head);
+    TEST_ASSERT_EQUAL((void *)6, (list.head)->data);
+    TEST_ASSERT_NULL((list.tail)->next);
+    TEST_ASSERT_EQUAL_PTR(&tail, list.tail);
+    TEST_ASSERT_EQUAL((void *)6, (list.tail)->data);
+    TEST_ASSERT_EQUAL(1, list.length);
+}
