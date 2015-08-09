@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <malloc.h>
+// #include <stdio.h>
+// #include <malloc.h>
 #include "List.h"
 /* 
 ListElement *createListElement(void *data)
@@ -47,16 +47,72 @@ void listDel(List *list)
 
         free(list);
     }
+} */
+
+void listInit(List *list)
+{
+    list->head = 0;
+    list->tail = 0;
+    list->length = 0;
+}
+
+void listElementInit(ListElement *listElement, void *data)
+{
+    listElement->next = 0;
+    listElement->data = data;
 }
 
 int isListEmpty(List *list)
 {
-    if(list->head == NULL)
+    if(list->head == 0)
         return 0;
 
     return 1;
 }
 
+void listAddTail(List *list, void *data)
+{
+    // ListElement newElement;
+    // listElementInit(&newElement, data);
+
+    if(!isListEmpty(list))
+    {
+        // list->head = &newElement;
+        // list->tail = &newElement;
+        list->head = (ListElement *)data;
+        list->tail = (ListElement *)data;
+    }
+    else
+    {
+        if(list->head->next != 0)
+        {
+            list->tail->next = (ListElement *)data;;
+            // list->tail = &newElement;
+        }
+        else
+        {
+            list->tail = (ListElement *)data;;
+            list->head->next = list->tail;
+        }
+    }
+
+    list->length++;
+}
+
+void listRemoveHead(List *list)
+{
+    if(!isListEmpty(list))
+        return;
+
+    if(list->head == list->tail)
+        list->tail = list->tail->next;
+
+    list->head = list->head->next;
+
+    list->length--;
+}
+
+/*
 void listAddHead(List *list, void *data)
 {
     ListElement *newElement = createListElement(data);
@@ -159,4 +215,3 @@ void *listRemoveTail(List *list)
 
     return temp->data;
 } */
-

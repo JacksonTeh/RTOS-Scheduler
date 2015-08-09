@@ -23,10 +23,14 @@ void listDel(List *list);
 
 void listAddHead(List *list, void *data);
 void listAddTail(List *list, void *data);
-void *listRemoveHead(List *list);
+// void *listRemoveHead(List *list);
 void *listRemoveTail(List *list);
 int isListEmpty(List *list); */
 
 
+
+void listInit(List *list);
+void listElementInit(ListElement *listElement, void *data);
+void listRemoveHead(List *list);
 
 #endif // List_H
