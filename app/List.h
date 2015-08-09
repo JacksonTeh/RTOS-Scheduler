@@ -15,6 +15,7 @@ typedef struct
   int length;
 } List;
 
+/*
 ListElement *createListElement(void *data);
 void destroyListElement(ListElement *listElement);
 List *listNew();
@@ -24,6 +25,8 @@ void listAddHead(List *list, void *data);
 void listAddTail(List *list, void *data);
 void *listRemoveHead(List *list);
 void *listRemoveTail(List *list);
-int isListEmpty(List *list);
+int isListEmpty(List *list); */
+
+
 
 #endif // List_H

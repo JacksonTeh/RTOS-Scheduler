@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 #include "List.h"
-
+/* 
 ListElement *createListElement(void *data)
 {
     ListElement *listElement = malloc(sizeof(ListElement));
@@ -158,4 +158,5 @@ void *listRemoveTail(List *list)
     list->length--;
 
     return temp->data;
-}
+} */
+

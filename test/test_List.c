@@ -9,7 +9,7 @@ void setUp(void)
 void tearDown(void)
 {
 }
-
+/* 
 void test_createListElement_should_create_new_listElement(void)
 {
 	ListElement *listElement1 = createListElement((void *)5);
@@ -357,4 +357,5 @@ void test_listRemoveTail_given_10_20_30_in_the_list_should_remove_tail_of_list(v
     TEST_ASSERT_EQUAL_PTR(NULL, list->tail->next);
 
 	listDel(list);
-}
+} */
+
