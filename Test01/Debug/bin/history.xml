@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g2 -Map=Test01.map -O0 --gc-sections -LC:/Users/D203C-01/CoIDE/workspace/ARM-Mutex -TC:/Users/D203C-01/CoIDE/workspace/ARM-Mutex/stm32f407vg_flash.ld -g">
-      <target file="Test01.elf" lastModified="14ea989c318">
+   <processor signature="4.9.3 -mcpu=cortex-m4 -mthumb -g2 -Map=Test01.map -O0 --gc-sections -LC:/Users/D203C-01/CoIDE/workspace/ARM-Mutex -TC:/Users/D203C-01/CoIDE/workspace/ARM-Mutex/stm32f407vg_flash.ld -g">
+      <target file="Test01.elf" lastModified="14f15486d7f">
          <source file="..\obj\assembly.o" lastModified="14ea989bddb"/>
          <source file="..\obj\Task.o" lastModified="14ea989b727"/>
          <source file="..\obj\ButtonSM.o" lastModified="14ea989bf22"/>

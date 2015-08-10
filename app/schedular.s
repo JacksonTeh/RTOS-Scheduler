@@ -5,6 +5,8 @@
 
 .global	taskSwitch
 .global	SysTick_Handler
+.extern readyQueue
+.extern runningTcb
 .extern mainTcb
 .extern taskOneTcb
 .extern taskTwoTcb
@@ -64,15 +66,32 @@ SysTick_Handler:
   //pop	{r4-r11, r0-r3}
   //pop	{r12, r0-r2}
   //pop	{r3}				//pop the link reg value to return to caller
-  ldr	r0, =mainTcb
+  /*ldr	r0, =mainTcb
   ldr	r1, =#0x0
   add	r1, sp
   str	r1, [r0, #TCB_SP]
   ldr	r0, =taskOneTcb
   ldr	sp, [r0, #TCB_SP]
-  pop	{r4-r11}
+  pop	{r4-r11}*/
   //ldr	lr, =#0x0
   //add	lr, r3
+  //bx	lr
+  ldr	r4, =runningTcb
+  ldr	r4, [r4]
+  str	r4, [r4, #TCB_SP]
+  push	{r7, lr}
+
+  ldr	r0, =readyQueue
+  bl	listRemoveHead
+  ldr	r5, r0
+  ldr	r1, =runningTcb
+  str	r0, [r1]
+  ldr	r0, =readyQueue
+  mov	r1, r4
+  bl	listAddTail
+  pop	{r7, lr}
+  ldr	sp, [r5, #TCB_SP]
+  pop	{r4-r11}
   bx	lr
 
   //push	{r7, lr}

@@ -1,9 +1,12 @@
 #include "Task.h"
+#include "List.h"
 
 uint8_t taskOneStack[1028];
 uint8_t taskTwoStack[1028];
 
-Tcb runningTcb;
+List readyQueue;
+
+Tcb *runningTcb;
 Tcb mainTcb;
 Tcb taskOneTcb;
 Tcb taskTwoTcb;
@@ -32,6 +35,8 @@ void taskTwo(void)
 void initTcb()
 {
 	CpuContext *cc1, *cc2;
+
+	listInit(&readyQueue);
 
     mainTcb.name = "main_thread";
     mainTcb.sp = 0;
@@ -77,4 +82,7 @@ void initTcb()
 	cc2->LR = 0x10000001;
 	cc2->PC = (uint32_t *)taskTwo;
 	cc2->xPSR = 0x01000000;
+
+	runningTcb = &mainTcb;
+
 }
